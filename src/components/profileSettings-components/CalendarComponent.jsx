@@ -8,7 +8,7 @@ const CalendarComponent = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/meeting/calendar", {
+    fetch("https://meetly-server.vercel.app/api/meeting/calendar", {
       credentials: "include",
     })
       .then((res) => res.json())

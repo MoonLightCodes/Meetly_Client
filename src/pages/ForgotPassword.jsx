@@ -25,7 +25,7 @@ const ForgotPassword = () => {
   const onSubmit = async (data) => {
     try {
       setError("");
-      const res = await axios.post("http://localhost:8000/api/auth/forgot-password", data);
+      const res = await axios.post("https://meetly-server.vercel.app/api/auth/forgot-password", data);
       toast.success(res.data.message)
       reset()
     } catch (err) {
